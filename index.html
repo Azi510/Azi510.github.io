@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    
-  </head>
-  <body>
-    <h1>这是我的个人网站</h1>
-    <p>欢迎光临</p>
-    <script>
-      
-    </script>
-  </body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game | GitHub 版</title>
+    <!-- 引入样式文件 -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- 可选：添加图标 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><rect width=%22128%22 height=%22128%22 fill=%22%23faf8ef%22/><text x=%2250%%22 y=%2255%%22 font-size=%2248%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23776e65%22>2048</text></svg>">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">2048</h1>
+        
+        <div class="game-info">
+            <div class="score-box">
+                分数: <span id="score">0</span>
+            </div>
+            <button class="reset-btn" id="resetBtn">重新开始</button>
+        </div>
+
+        <!-- 4x4 游戏网格 -->
+        <div class="grid-container" id="gridContainer"></div>
+
+        <!-- 游戏结果弹窗 -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">游戏结束!</h2>
+                <p id="modalDesc"></p>
+                <button class="modal-btn" id="modalBtn">再来一局</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入游戏逻辑 -->
+    <script src="./js/game.js"></script>
+</body>
 </html>
